@@ -8,22 +8,14 @@ import { DashboardComponent } from './dashboard.component';
 import { AppComponent } from './app.component';
 
 import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, RouterModule.forRoot([{
-    path: 'heroes',
-    component: HeroesComponent
-  }, {
-    path: 'detail/:id',
-    component: HeroDetailComponent
-  }, {
-    path: 'dashboard',
-    component: DashboardComponent
-  }, {
-    path: '',
-    redirectTo: '/dashboard',
-    pathMatch: 'full'
-  }])],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    AppRoutingModule
+  ],
   declarations: [
     AppComponent,
     HeroDetailComponent,

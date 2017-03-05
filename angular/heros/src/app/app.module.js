@@ -16,26 +16,17 @@ var hero_component_1 = require('./hero.component');
 var hero_service_1 = require('./hero.service');
 var dashboard_component_1 = require('./dashboard.component');
 var app_component_1 = require('./app.component');
-var router_1 = require('@angular/router');
+var app_routing_module_1 = require('./app-routing.module');
 var AppModule = (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         core_1.NgModule({
-            imports: [platform_browser_1.BrowserModule, forms_1.FormsModule, router_1.RouterModule.forRoot([{
-                        path: 'heroes',
-                        component: hero_component_1.HeroesComponent
-                    }, {
-                        path: 'detail/:id',
-                        component: hero_detail_component_1.HeroDetailComponent
-                    }, {
-                        path: 'dashboard',
-                        component: dashboard_component_1.DashboardComponent
-                    }, {
-                        path: '',
-                        redirectTo: '/dashboard',
-                        pathMatch: 'full'
-                    }])],
+            imports: [
+                platform_browser_1.BrowserModule,
+                forms_1.FormsModule,
+                app_routing_module_1.AppRoutingModule
+            ],
             declarations: [
                 app_component_1.AppComponent,
                 hero_detail_component_1.HeroDetailComponent,
